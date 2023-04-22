@@ -1,0 +1,28 @@
+columns:
+    id:
+        label: id
+        type: number
+        invisible: true
+    site_code:
+        label: 'Codice sito'
+        type: text
+        searchable: true
+        sortable: true
+    site_url:
+        label: 'Url Sito'
+        type: text
+        sortable: true
+    site_name:
+        label: 'Nome sito'
+        type: text
+        searchable: true
+        sortable: true
+    id_site:
+        label: 'Id Sito'
+        type: number
+        sortable: true
+    campaign:
+        label: Campagne
+        type: text
+        select: name
+        relation: campaign

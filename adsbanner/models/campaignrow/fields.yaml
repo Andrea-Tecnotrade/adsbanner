@@ -1,0 +1,44 @@
+fields:
+    position:
+        label: Posizione
+        nameFrom: column_name
+        descriptionFrom: description
+        span: auto
+        required: 1
+        type: relation
+    banner_weight:
+        label: Peso
+        span: auto
+        default: '100'
+        type: number
+    is_active:
+        label: 'Posizione attiva'
+        span: auto
+        required: 1
+        type: checkbox
+    id:
+        label: Id
+        span: auto
+        readOnly: 1
+        hidden: 1
+        type: number
+    campaign:
+        label: Campagna
+        nameFrom: name
+        descriptionFrom: description
+        emptyOption: 'Scegli una campagna'
+        span: auto
+        hidden: 0
+        containerAttributes: {  }
+        type: relation
+    category:
+        label: 'Seleziona in quale categoria vuoi visualizzare questo banner'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    banner:
+        label: Partial
+        span: full
+        path: fields_banner
+        type: partial

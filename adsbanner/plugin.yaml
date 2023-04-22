@@ -1,0 +1,36 @@
+plugin:
+    name: 'tecnotrade.adsbanner::lang.plugin.name'
+    description: 'tecnotrade.adsbanner::lang.plugin.description'
+    author: Tecnotrade
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: ADS
+        url: /
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item6:
+                label: 'Siti attivi'
+                url: tecnotrade/adsbanner/site
+                icon: icon-sitemap
+            side-menu-item5:
+                label: Advertisers
+                url: tecnotrade/adsbanner/advertiser
+                icon: icon-users
+            side-menu-item:
+                label: Banner
+                url: tecnotrade/adsbanner/banner
+                icon: icon-image
+            side-menu-item2:
+                label: Posizioni
+                url: tecnotrade/adsbanner/position
+                icon: icon-sort-numeric-asc
+            side-menu-item4:
+                label: Campagne
+                url: tecnotrade/adsbanner/campaign
+                icon: icon-table
+            side-menu-item3:
+                label: 'Righe campagne'
+                url: tecnotrade/adsbanner/campaignrow
+                icon: icon-columns

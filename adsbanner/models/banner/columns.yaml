@@ -1,0 +1,35 @@
+columns:
+    id:
+        label: Id
+        type: number
+        invisible: true
+    name:
+        label: 'Nome banner'
+        type: text
+        sortable: true
+    code:
+        label: 'Codice banner'
+        type: text
+    advertiser:
+        label: Cliente
+        type: text
+        searchable: true
+        sortable: true
+        select: display_name
+        relation: advertiser
+    main_image:
+        label: 'Immagine principale'
+        type: partial
+        path: ~/plugins/tecnotrade/adsbanner/models/banner/main_image_column_field.htm
+    impressions:
+        label: Impressions
+        type: text
+        sortable: true
+    click:
+        label: Click
+        type: text
+        sortable: true
+    crt:
+        label: 'Conversion rate'
+        type: text
+        sortable: true

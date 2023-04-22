@@ -1,0 +1,21 @@
+fields:
+    id:
+        label: Id
+        span: auto
+        readOnly: 1
+        type: number
+    column_name:
+        label: 'Nome posizione'
+        span: auto
+        required: 1
+        type: text
+    column_code:
+        label: 'Codice posizione'
+        span: auto
+        required: 1
+        type: text
+    column_description:
+        label: 'Column description'
+        size: large
+        span: full
+        type: textarea

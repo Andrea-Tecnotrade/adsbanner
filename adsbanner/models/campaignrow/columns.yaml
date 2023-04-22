@@ -1,0 +1,30 @@
+columns:
+    campaign:
+        label: Campagna
+        type: text
+        default: 'Campagna non associata'
+        select: name
+        relation: campaign
+    banner:
+        label: 'Nome Banner'
+        type: text
+        select: name
+        relation: banner
+    banner_image:
+        label: 'Banner image'
+        type: partial
+        path: ~/plugins/tecnotrade/adsbanner/models/campaignrow/main_image_banner_column_field.htm
+    advertiser_name:
+        label: Advertiser
+        type: partial
+        path: ~/plugins/tecnotrade/adsbanner/models/campaignrow/advertiser_column_field.htm
+    posizione:
+        label: 'Nome posizione'
+        type: text
+        select: column_name
+        relation: position
+    is_active:
+        label: Attivo
+        type: switch
+        
+        

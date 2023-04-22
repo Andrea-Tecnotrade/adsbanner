@@ -1,0 +1,14 @@
+<?php
+use Tecnotrade\Adsbanner\Models\Campaignrow;
+use Tecnotrade\Adsbanner\Models\Banner;
+$myrow=Campaignrow::with('banner')->where('id','=',$record->id)->first();
+if(!empty($myrow)){
+    $mybanner=Banner::with('advertiser')->where('id','=',$myrow->banner->id)->first();
+    if($mybanner){
+        if(!empty($mybanner->advertiser->display_name)){
+        echo $mybanner->advertiser->display_name;
+        }
+    }   
+
+}
+?>

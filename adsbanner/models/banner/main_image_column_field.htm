@@ -1,0 +1,14 @@
+<?php
+use System\Models\File;
+
+if($record->main_image){
+   $filePath = config('filesystems.disks.media.root') . $record->main_image;
+   
+    if (file_exists($filePath)) {
+        $thumbUrl = url('/storage/app/media') . $record->main_image;
+        echo '<img src="'.$thumbUrl.'" style="width:80px;height:auto">';
+        
+   // qui puoi utilizzare $filePath per fare ciò che vuoi con il file
+    }
+}
+?>

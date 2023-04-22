@@ -1,0 +1,43 @@
+fields:
+    code:
+        label: 'Codice advertiser'
+        span: auto
+        type: text
+    display_name:
+        label: 'Nome visualizzato in gestione'
+        span: auto
+        required: 1
+        type: text
+    name:
+        label: Name
+        span: auto
+        type: text
+    surname:
+        label: Cognome
+        span: auto
+        type: text
+    ragione_sociale:
+        label: 'Ragione sociale'
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    phone:
+        label: Telefono
+        span: auto
+        type: text
+    id:
+        label: Id
+        span: auto
+        readOnly: 1
+        hidden: 1
+        type: number
+    banner:
+        label: 'Banner associati al cliente'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        readOnly: 1
+        type: relation

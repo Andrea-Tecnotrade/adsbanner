@@ -1,0 +1,43 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: Nome
+        type: text
+        searchable: true
+        sortable: true
+    surname:
+        label: Cognome
+        type: text
+        searchable: true
+        sortable: true
+    ragione_sociale:
+        label: 'Ragione sociale'
+        type: text
+        searchable: true
+        sortable: true
+    display_name:
+        label: 'Full name'
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+        sortable: true
+    phone:
+        label: Telefono
+        type: text
+        searchable: true
+        sortable: true
+    code:
+        label: Codice
+        type: text
+        searchable: true
+    banner:
+        label: 'Banner associati'
+        type: number
+        select: name
+        relation: banner

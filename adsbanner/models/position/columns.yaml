@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: id
+        type: number
+        invisible: true
+    column_name:
+        label: 'Nome posizione'
+        type: text
+        searchable: true
+        sortable: true
+    column_code:
+        label: 'Codice posizione'
+        type: text
+    column_description:
+        label: 'Info posizione'
+        type: text

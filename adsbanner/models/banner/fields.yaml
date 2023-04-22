@@ -1,0 +1,94 @@
+tabs:
+    fields:
+        name:
+            label: 'Nome banner'
+            span: auto
+            required: 1
+            type: text
+            tab: 'Informazioni principali'
+        advertiser:
+            label: Cliente
+            nameFrom: display_name
+            descriptionFrom: description
+            span: auto
+            required: 1
+            type: relation
+            tab: 'Informazioni principali'
+        code:
+            label: 'Codice banner'
+            span: auto
+            required: 1
+            type: text
+            tab: 'Informazioni principali'
+        id:
+            label: Id
+            span: auto
+            hidden: 1
+            type: number
+            tab: 'Informazioni principali'
+        main_image:
+            label: 'Immagine principale'
+            mode: image
+            imageWidth: '80'
+            imageHeight: '80'
+            span: auto
+            required: 0
+            type: mediafinder
+            tab: 'Immagini e url'
+        tablet_image:
+            label: 'Immagine per tablet'
+            mode: image
+            imageWidth: '80'
+            imageHeight: '80'
+            span: auto
+            type: mediafinder
+            tab: 'Immagini e url'
+        mobile_image:
+            label: 'Immagine per mobile'
+            mode: image
+            span: auto
+            type: mediafinder
+            tab: 'Immagini e url'
+        link_url:
+            label: "Target al click dell'immagine"
+            span: auto
+            placeholder: 'https://www.nomesito.it'
+            type: text
+            tab: 'Immagini e url'
+        link_target:
+            label: 'Dove aprire il link'
+            options:
+                0: 'Scegli un target'
+                _blank: 'Nuova finestra'
+                _self: 'Stessa finestra'
+            showSearch: true
+            span: auto
+            type: dropdown
+            tab: 'Immagini e url'
+        ads_script:
+            label: 'Inserisci lo script completo per la campagna ads'
+            span: full
+            type: text
+            tab: 'Campagna Ads Esterna'
+        impressions:
+            label: Impressions
+            span: auto
+            default: '0'
+            required: 1
+            type: number
+            tab: 'Statistiche generali'
+        click:
+            label: Click
+            span: auto
+            default: '0'
+            readOnly: 1
+            required: 1
+            type: number
+            tab: 'Statistiche generali'
+        crt:
+            label: 'Tasso di conversione'
+            span: auto
+            default: '0'
+            required: 1
+            type: number
+            tab: 'Statistiche generali'

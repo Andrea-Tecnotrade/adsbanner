@@ -1,0 +1,32 @@
+fields:
+    id_site:
+        label: 'Id Sito'
+        span: auto
+        required: 1
+        type: number
+    site_code:
+        label: 'Codice sito'
+        span: auto
+        required: 1
+        type: text
+    site_name:
+        label: 'Nome sito'
+        span: auto
+        required: 1
+        type: text
+    site_url:
+        label: 'Url sito'
+        span: auto
+        type: text
+    site_lang:
+        label: 'Codice lingua'
+        span: auto
+        hidden: 1
+        type: text
+    campaign:
+        label: 'Campagne Associate'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        readOnly: 1
+        type: relation

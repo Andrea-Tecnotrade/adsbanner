@@ -1,0 +1,31 @@
+columns:
+    id:
+        label: id
+        type: number
+        invisible: true
+    name:
+        label: 'Nome campagna'
+        type: text
+        searchable: true
+    code:
+        label: 'Codice campagna'
+        type: text
+        searchable: true
+        sortable: true
+    start_date:
+        label: data_inizio
+        type: date
+        sortable: true
+        format: d-m-Y
+    end_date:
+        label: 'Data fine'
+        type: date
+        format: d-m-y
+    description:
+        label: 'Descrizione campagna'
+        type: text
+    advertiser_id:
+        label: Adveriser
+        type: text
+        select: display_name
+        relation: advertiser
