@@ -1,0 +1,9 @@
+righecampagna:
+  label: Banner campagna
+  view: 
+    list: $/tecnotrade/adsbanner/models/campaignrow/columns.yaml
+  manage:
+    form: $/tecnotrade/adsbanner/models/campaignrow/fields.yaml
+    showCheckboxes: true 
+  
+ 

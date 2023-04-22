@@ -1,0 +1,10 @@
+name: Advertiser
+form: $/tecnotrade/adsbanner/models/advertiser/fields.yaml
+modelClass: Tecnotrade\Adsbanner\Models\Advertiser
+defaultRedirect: tecnotrade/adsbanner/advertiser
+create:
+    redirect: 'tecnotrade/adsbanner/advertiser/update/:id'
+    redirectClose: tecnotrade/adsbanner/advertiser
+update:
+    redirect: tecnotrade/adsbanner/advertiser
+    redirectClose: tecnotrade/adsbanner/advertiser

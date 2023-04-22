@@ -1,0 +1,12 @@
+banner:
+  label: Banner
+  view: 
+    form: $/tecnotrade/adsbanner/models/banner/fields.yaml
+    toolbarButtons: create|add|update|remove
+  manage:
+    form: $/tecnotrade/adsbanner/models/banner/fields.yaml
+    list: $/tecnotrade/adsbanner/models/banner/columns.yaml
+    showCheckboxes: true 
+
+
+     

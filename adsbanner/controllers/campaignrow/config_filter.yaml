@@ -1,0 +1,13 @@
+scopes:
+  banner:
+    label: advertiser
+    modelClass: Tecnotrade\Adsbanner\Models\Advertiser
+    condition: select id in(tecnotrade_adsbanner_banner inner join tecnotrade_adsbanner_advertser on  tecnotrade_adsbanner_banner.advertsier_id = tecnotrade_adsbanner_advertiser.id where tecnotrade_adsbanner_advertiser.id in (:filtered) 
+    nameFrom: display_name
+
+  campaign:
+    label: campagna
+    modelClass: Tecnotrade\Adsbanner\Models\Campaign
+    condition: select id from ttecnotrade_adsbanner_campaign_rows where campaign_id in (:filtered) 
+
+      

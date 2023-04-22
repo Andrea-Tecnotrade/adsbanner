@@ -1,0 +1,10 @@
+name: Campaignrow
+form: $/tecnotrade/adsbanner/models/campaignrow/fields.yaml
+modelClass: Tecnotrade\Adsbanner\Models\Campaignrow
+defaultRedirect: tecnotrade/adsbanner/campaignrow
+create:
+    redirect: 'tecnotrade/adsbanner/campaignrow/update/:id'
+    redirectClose: tecnotrade/adsbanner/campaignrow
+update:
+    redirect: tecnotrade/adsbanner/campaignrow
+    redirectClose: tecnotrade/adsbanner/campaignrow

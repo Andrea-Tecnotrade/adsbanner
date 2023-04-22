@@ -1,0 +1,76 @@
+
+
+<div class="layout-row" id="mypartialrow">
+
+<?php
+use System\Models\File;
+$createurl='/admin/tecnotrade/adsbanner/campaignrow/create';
+
+
+echo '<div class="row" style="text-align:left;margin: 0 20px 20px;">';
+echo '<a href="'.$createurl.'" class="btn btn-default" target="_blank" data-size="sm" style="max-width:200px">Nuova posizione</a>';
+echo '</div>'; 
+echo '<div class="list-widget-container">';
+echo '<div class="list-content" style="margin-top:40px">';
+echo'<table class="table data" style="margin-bottom:0"><tr><td style="width:18%" class="list-cell-type-text">Posizione</td><td style="width:18%" class="list-cell-type-text">Banner</td><td style="width:18%" class="list-cell-type-text">Image</td><td style="width:18%" class="list-cell-type-text">Categorie</td><td style="width:10%">Edit</td></tr>';    
+if($vars["righecampagna"]) {
+
+
+$righe=$vars["righecampagna"];
+    foreach($righe as $riga){
+    $idRow=$riga["id"];
+    $idBanner=$riga["banner_id"];
+    $idPosizione=$riga["position_id"];
+    $tdBanner='';
+    $tdBannerImage='';
+    $tdCategory='';
+    $tdPosition='';
+    
+    if($riga["banner"]){
+        $bannerDetail=$riga["banner"];
+        $tdBanner='<td class="list-cell-type-text" style="width:18%;text-align:left">'.($bannerDetail["name"]).'</td>';
+        if(!empty($bannerDetail["main_image"])){
+            $filePath = config('filesystems.disks.media.root') . $bannerDetail["main_image"];
+
+            if (file_exists($filePath)) {
+            
+            $thumbUrl = url('/storage/app/media') . $bannerDetail["main_image"];
+            $tdBannerImage='<td class="list-cell-type-text" style="width:18%;text-align:left"><img src="'.$thumbUrl.'" style="width:80px;height:auto"></td>';
+            }
+        }
+    }
+    if($riga["position"]){
+        $positionDetail=$riga["position"];
+        $tdPosition='<td class="list-cell-type-text" style="width:18%;text-align:left">'.$positionDetail["column_name"].'</td>';
+    }
+    if($riga["category"]){
+    $categoryDetails=$riga["category"];
+    $catList='';
+        foreach($categoryDetails as $cat){
+            $catList.=' '.$cat["name"];
+        }
+    $tdCategory='<td class="list-cell-type-text" style="min-width:18%;text-align:left">'.$catList.'</td>';
+    }
+    else{
+    $tdCategory='<td class="list-cell-type-text" style="min-width:18%;text-align:left">nessuna categoria</td>';
+    }
+    $url='/admin/tecnotrade/adsbanner/campaignrow/update/'.$idRow;
+    $tdButton='<td class="list-cell-type-text" style="width:10%;text-align:left"><a href="'.$url.'" class="btn btn-default" target="_blank" data-size="lg">Edit</a></td>';
+    
+    echo'<tr>';
+    echo $tdPosition.$tdBanner.$tdBannerImage.$tdCategory.$tdButton;
+    echo'</tr>';
+    
+    }
+}
+else{
+echo '<tr><td colspan="7"><h4>nessuna posizione assegnata</h4></td></tr>';
+}
+echo '</table>';
+?>
+</div>
+</div>
+</div>
+
+
+

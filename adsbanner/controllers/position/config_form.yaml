@@ -1,0 +1,10 @@
+name: Position
+form: $/tecnotrade/adsbanner/models/position/fields.yaml
+modelClass: Tecnotrade\Adsbanner\Models\Position
+defaultRedirect: tecnotrade/adsbanner/position
+create:
+    redirect: 'tecnotrade/adsbanner/position/update/:id'
+    redirectClose: tecnotrade/adsbanner/position
+update:
+    redirect: tecnotrade/adsbanner/position
+    redirectClose: tecnotrade/adsbanner/position

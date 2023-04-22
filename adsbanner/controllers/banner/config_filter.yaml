@@ -1,0 +1,6 @@
+scopes:
+  advertiser:
+    label: advertiser
+    modelClass: Tecnotrade\Adsbanner\Models\Advertiser
+    condition: select id from tecnotrade_adsbanner_banner where advertiser_id in (:filtered) 
+    nameFrom: display_name

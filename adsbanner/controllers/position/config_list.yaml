@@ -1,0 +1,12 @@
+list: $/tecnotrade/adsbanner/models/position/columns.yaml
+modelClass: Tecnotrade\Adsbanner\Models\Position
+title: Position
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'tecnotrade/adsbanner/position/update/:id'
